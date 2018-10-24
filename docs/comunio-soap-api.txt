@@ -1,0 +1,211 @@
+
+Prefixes:
+     xsd: http://www.w3.org/2001/XMLSchema
+     ns0: http://rpc.comunio.de/soapservice.php?wsdl
+
+Global elements:
+
+
+Global types:
+     xsd:anyType
+     ns0:Active_starter
+     ns0:ArrayOfArrayOfPlayerlineup(userid: xsd:int, ArrayOfPlayerlineup: ns0:ArrayOfPlayerlineup[])
+     ns0:ArrayOfClub(Club: ns0:Club[])
+     ns0:ArrayOfGamedayInfoDetailsItem(GamedayInfoDetailsItem: ns0:GamedayInfoDetailsItem[])
+     ns0:ArrayOfGamedayInfoEnhancedItem(GamedayInfoEnhancedItem: ns0:GamedayInfoEnhancedItem[])
+     ns0:ArrayOfGamedayInfoItem(GamedayInfoItem: ns0:GamedayInfoItem[])
+     ns0:ArrayOfGamedayInfoPlayerDetailsItem(GamedayInfoPlayerDetailsItem: ns0:GamedayInfoPlayerDetailsItem[])
+     ns0:ArrayOfGamedayInfoPlayerItem(GamedayInfoPlayerItem: ns0:GamedayInfoPlayerItem[])
+     ns0:ArrayOfGamedayItem(GamedayItem: ns0:GamedayItem[])
+     ns0:ArrayOfInteger(Integer: xsd:int[])
+     ns0:ArrayOfLogin(Login: xsd:string[])
+     ns0:ArrayOfMatchServiceMatchEventItem(MatchServiceMatchEventItem: ns0:MatchServiceMatchEventItem[])
+     ns0:ArrayOfNewsItem(NewsItem: ns0:NewsItem[])
+     ns0:ArrayOfPlayer(Player: ns0:Player[])
+     ns0:ArrayOfPlayerExchangemarket(PlayerExchangemarket: ns0:PlayerExchangemarket[])
+     ns0:ArrayOfPlayerInfo(PlayerInfo: ns0:PlayerInfo[])
+     ns0:ArrayOfPlayerPoints(PlayerPointsItem: ns0:PlayerPointsItem[])
+     ns0:ArrayOfPlayerState(PlayerStateItem: ns0:PlayerStateItem[])
+     ns0:ArrayOfPlayerid(Playerid: xsd:int[])
+     ns0:ArrayOfPlayerlineup(Playerlineup: ns0:Playerlineup[])
+     ns0:ArrayOfPlayerscore(Playerscore: ns0:Playerscore[])
+     ns0:ArrayOfTitleid(Titleid: xsd:int[])
+     ns0:ArrayOfTransferItem(TransferItem: ns0:TransferItem[])
+     ns0:ArrayOfUser(User: ns0:User[])
+     ns0:ArrayOfUserid(Userid: xsd:int[])
+     ns0:Club(id: xsd:int, name: xsd:string, url: xsd:string)
+     ns0:GamedayInfoDetailsItem(gameday_id: xsd:int, match_id: xsd:int, kickoff: xsd:string, home_club: ns0:GamedayInfoTeamItemForEnhanced, away_club: ns0:GamedayInfoTeamItemForEnhanced, events: ns0:ArrayOfMatchServiceMatchEventItem)
+     ns0:GamedayInfoEnhancedItem(gameday_id: xsd:int, match_id: xsd:int, kickoff: xsd:string, home_club: ns0:GamedayInfoTeamItemForEnhanced, away_club: ns0:GamedayInfoTeamItemForEnhanced)
+     ns0:GamedayInfoItem(gameday_id: xsd:int, match_id: xsd:int, kickoff: xsd:string, home_club: ns0:GamedayInfoTeamItem, away_club: ns0:GamedayInfoTeamItem)
+     ns0:GamedayInfoPlayerDetailsItem(id: xsd:int, points: xsd:int, grade: xsd:float, name: xsd:string, rgoals: xsd:int, fgoals: xsd:int, ogoals: xsd:int, yellow: xsd:int, yellowred: xsd:int, red: xsd:int, m_in: xsd:int, m_out: xsd:int)
+     ns0:GamedayInfoPlayerItem(id: xsd:int, club_id: xsd:int, points: xsd:int, grade: xsd:float, name: xsd:string)
+     ns0:GamedayInfoTeamItem(club_id: xsd:int, club_name: xsd:string, goals: xsd:int)
+     ns0:GamedayInfoTeamItemForDetails(club_id: xsd:int, club_name: xsd:string, players: ns0:ArrayOfGamedayInfoPlayerDetailsItem)
+     ns0:GamedayInfoTeamItemForEnhanced(club_id: xsd:int, club_name: xsd:string, players: ns0:ArrayOfGamedayInfoPlayerItem)
+     ns0:GamedayItem(id: xsd:int, gameday: xsd:int, title: xsd:string, datetime: xsd:date, shifted: xsd:boolean)
+     ns0:InvolvedTradablesData(tradable1: ns0:InvolvedTradablesTradable, tradable2: ns0:InvolvedTradablesTradable)
+     ns0:InvolvedTradablesTradable(type: xsd:string, tradableId: xsd:int, name: xsd:string)
+     ns0:MatchEventInfo(type: xsd:string, info: xsd:string)
+     ns0:MatchServiceMatchEventItem(type: xsd:string, minute: xsd:int, matchTime: xsd:string, additionalMinutes: xsd:int, teamId: xsd:int, involvedTradablesData: ns0:InvolvedTradablesData, matchEventInfo: ns0:MatchEventInfo)
+     ns0:NewsItem(date: xsd:date, author: xsd:string, subject: xsd:string, message: xsd:string)
+     ns0:Player(id: xsd:int, name: xsd:string, points: xsd:int, clubid: xsd:int, quote: xsd:int, status: xsd:string, status_info: xsd:string, position: ns0:Position)
+     ns0:PlayerExchangemarket(id: xsd:int, name: xsd:string, points: xsd:int, clubid: xsd:int, quote: xsd:int, recommendedprice: xsd:int, status: xsd:string, status_info: xsd:string, position: ns0:Position, placed: xsd:date, ownerid: xsd:int)
+     ns0:PlayerInfo(id: xsd:int, name: xsd:string, points: xsd:int, clubid: xsd:int, quote: xsd:int, status: xsd:string, purchase_price: xsd:int, purchase_date: xsd:date, status_info: xsd:string, position: ns0:Position)
+     ns0:PlayerPointsItem(playerid: xsd:int, points: xsd:int)
+     ns0:PlayerStateItem(playerid: xsd:int, state: xsd:boolean)
+     ns0:Playerlineup(id: xsd:int, name: xsd:string, points: xsd:int, clubid: xsd:int, position: ns0:Position, active_starter: ns0:Active_starter)
+     ns0:Playerscore(id: xsd:int, name: xsd:string, position: ns0:Position, points: xsd:int, quote: xsd:int)
+     ns0:Position
+     ns0:TradableMatchStats(yellow: xsd:int, yellowred: xsd:int, red: xsd:int, m_in: xsd:int, m_out: xsd:int, pcount: xsd:int, psum: xsd:int, fgoals: xsd:int, rgoals: xsd:int)
+     ns0:TransferItem(playerid: xsd:int, userid_from: xsd:int, userid_to: xsd:int, price: xsd:string, date: xsd:date)
+     ns0:User(id: xsd:int, login: xsd:string, name: xsd:string, points: xsd:int, communityid: xsd:int)
+     ns0:UserItem(sex: xsd:string, name: xsd:string, firstname: xsd:string, email: xsd:string, address: xsd:string, zip: xsd:string, city: xsd:string, login: xsd:string, dob: xsd:date)
+     ns0:news_language
+     ns0:news_user_type
+     xsd:ENTITIES
+     xsd:ENTITY
+     xsd:ID
+     xsd:IDREF
+     xsd:IDREFS
+     xsd:NCName
+     xsd:NMTOKEN
+     xsd:NMTOKENS
+     xsd:NOTATION
+     xsd:Name
+     xsd:QName
+     xsd:anySimpleType
+     xsd:anyURI
+     xsd:base64Binary
+     xsd:boolean
+     xsd:byte
+     xsd:date
+     xsd:dateTime
+     xsd:decimal
+     xsd:double
+     xsd:duration
+     xsd:float
+     xsd:gDay
+     xsd:gMonth
+     xsd:gMonthDay
+     xsd:gYear
+     xsd:gYearMonth
+     xsd:hexBinary
+     xsd:int
+     xsd:integer
+     xsd:language
+     xsd:long
+     xsd:negativeInteger
+     xsd:nonNegativeInteger
+     xsd:nonPositiveInteger
+     xsd:normalizedString
+     xsd:positiveInteger
+     xsd:short
+     xsd:string
+     xsd:time
+     xsd:token
+     xsd:unsignedByte
+     xsd:unsignedInt
+     xsd:unsignedLong
+     xsd:unsignedShort
+
+Bindings:
+     Soap11Binding: {http://rpc.comunio.de/soapservice.php?wsdl}soapservicewsdlBinding
+
+Service: soapservicewsdl
+     Port: soapservicewsdlPort (Soap11Binding: {http://rpc.comunio.de/soapservice.php?wsdl}soapservicewsdlBinding)
+         Operations:
+            cancelservice(userid: xsd:int) -> return: xsd:boolean
+            checkPermissions(userid: xsd:int) -> return: xsd:boolean
+            checkcommunitypermissions(userid: xsd:int) -> return: xsd:boolean
+            checkmultiPermissions(arr_userid: ns0:ArrayOfUserid) -> return: ns0:ArrayOfPlayerState
+            communityexists(communityid: xsd:int) -> return: xsd:boolean
+            deleteteamtitle(communityid: xsd:int, titleid: xsd:int) -> return: xsd:boolean
+            deleteusertitle(userid: xsd:int, titleid: xsd:int) -> return: xsd:boolean
+            getUserInformation(userid: xsd:int, md5password: xsd:string) -> return: ns0:UserItem
+            getalluserscurrentlineup(userid: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getalluserslineupbygameday(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getbestlineupbygameday(gameday: xsd:int) -> return: ns0:ArrayOfPlayerscore
+            getclubs() -> return: ns0:ArrayOfClub
+            getcommunityadmins(communityid: xsd:int) -> return: ns0:ArrayOfUserid
+            getcommunitybonus(communityid: xsd:int) -> return: xsd:int
+            getcommunityid(userid: xsd:int) -> return: xsd:int
+            getcommunitymarket(communityid: xsd:int) -> return: ns0:ArrayOfPlayerExchangemarket
+            getcommunityname(communityid: xsd:int) -> return: xsd:string
+            getcommunitynamebyuserid(userid: xsd:int) -> return: xsd:string
+            getcomputernews(communityid: xsd:int, days: xsd:int, items: xsd:int) -> return: ns0:ArrayOfNewsItem
+            getcurrentbudget(userid: xsd:int) -> return: xsd:int
+            getgamedayinfo(gamedayid: xsd:int) -> return: ns0:ArrayOfGamedayInfoItem
+            getgamedayinfodetails(gamedayid: xsd:int) -> return: ns0:ArrayOfGamedayInfoDetailsItem
+            getgamedayinfoenhanced(gamedayid: xsd:int) -> return: ns0:ArrayOfGamedayInfoEnhancedItem
+            getgamedays() -> return: ns0:ArrayOfGamedayItem
+            getlastpartnerranking() -> return: ns0:ArrayOfUser
+            getlatestgameday() -> return: xsd:int
+            getlatestgamedayid() -> return: xsd:int
+            getlogin(userid: xsd:int) -> return: xsd:string
+            getmultiusergamedaypoints(arr_userid: ns0:ArrayOfUserid, gameday: xsd:int) -> return: ns0:ArrayOfPlayerPoints
+            getmultiusergamedaypointsid(arr_userid: ns0:ArrayOfUserid, gameday_id: xsd:int) -> return: ns0:ArrayOfPlayerPoints
+            getmultiusersgamdaybudgetstate(arr_userid: ns0:ArrayOfUserid) -> return: ns0:ArrayOfPlayerState
+            getmultiusersplayerbygameday(arr_userid: ns0:ArrayOfUserid, gameday: xsd:int) -> return: ns0:ArrayOfArrayOfPlayerlineup
+            getmultiusersplayerbygamedayid(arr_userid: ns0:ArrayOfUserid, gameday_id: xsd:int) -> return: ns0:ArrayOfArrayOfPlayerlineup
+            getmultiuserspoints(arr_userid: ns0:ArrayOfUserid) -> return: ns0:ArrayOfPlayerPoints
+            getpartnerranking() -> return: ns0:ArrayOfUser
+            getplayerbyforumid(spoxid: xsd:int) -> return: xsd:int
+            getplayerbyid(playerid: xsd:int) -> return: ns0:Player
+            getplayerbysportaldeid(sportaldeid: xsd:int) -> return: xsd:int
+            getplayerbyspoxid(spoxid: xsd:int) -> return: xsd:int
+            getplayergamedaypoints(playerid: xsd:int, gameday: xsd:int) -> return: xsd:int
+            getplayergamedaystatistics(playerid: xsd:int, gameday: xsd:int) -> return: ns0:TradableMatchStats
+            getplayergamedaystatisticsid(playerid: xsd:int, gameday_id: xsd:int) -> return: ns0:TradableMatchStats
+            getplayersbought(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfTransferItem
+            getplayersbyclubid(clubid: xsd:int) -> return: ns0:ArrayOfPlayer
+            getplayersbyclubidinclretired(clubid: xsd:int) -> return: ns0:ArrayOfPlayer
+            getplayersbyuserid(userid: xsd:int) -> return: ns0:ArrayOfPlayer
+            getplayersinfobyuserid(userid: xsd:int) -> return: ns0:ArrayOfPlayerInfo
+            getplayerssold(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfTransferItem
+            getplayerssportaldeid(playerid: xsd:int) -> return: xsd:int
+            getplayersspoxid(playerid: xsd:int) -> return: xsd:int
+            getquote(playerid: xsd:int, date: xsd:string) -> return: xsd:int
+            getregisteredusers() -> return: ns0:ArrayOfUserid
+            getserviceexpirationdate(userid: xsd:int) -> return: xsd:string
+            getserviceranking() -> return: ns0:ArrayOfUser
+            getsoapservicerelease() -> return: xsd:int
+            getteamsize(userid: xsd:int) -> return: xsd:int
+            getteamvalue(userid: xsd:int) -> return: xsd:int
+            getuserbonus(userid: xsd:int) -> return: xsd:int
+            getusergamedaypoints(userid: xsd:int, gameday: xsd:int) -> return: xsd:int
+            getusergamedaypointsid(userid: xsd:int, gameday_id: xsd:int) -> return: xsd:int
+            getuserid(login: xsd:string) -> return: xsd:int
+            getuserids(communityid: xsd:int) -> return: ns0:ArrayOfUserid
+            getuseridsbyplayer(player: xsd:int) -> return: ns0:ArrayOfUserid
+            getuserlogins(communityid: xsd:int) -> return: ns0:ArrayOfLogin
+            getuserpenalty(userid: xsd:int) -> return: xsd:int
+            getuserscurrentlineup(userid: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getusersdescription(userid: xsd:int) -> return: xsd:string
+            getusersfirstname(userid: xsd:int) -> return: xsd:string
+            getusersgamdaybudgetstate(userid: xsd:int) -> return: xsd:boolean
+            getuserslineupbygameday(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getuserslineupbygamedayid(userid: xsd:int, gameday_id: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getusersname(userid: xsd:int) -> return: xsd:string
+            getusersplayerbygameday(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getusersplayerbygamedayid(userid: xsd:int, gameday_id: xsd:int) -> return: ns0:ArrayOfPlayerlineup
+            getuserspoints(userid: xsd:int) -> return: xsd:int
+            getuserspublictransfers(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfTransferItem
+            getusertitle(userid: xsd:int) -> return: ns0:ArrayOfTitleid
+            getusertransfers(userid: xsd:int, gameday: xsd:int) -> return: ns0:ArrayOfTransferItem
+            getwatchlistsbyplayer(player: xsd:int) -> return: ns0:ArrayOfPlayerid
+            player_deleteteamtitle(titleid: xsd:int) -> return: xsd:boolean
+            player_deleteusertitle(userid: xsd:int, titleid: xsd:int) -> return: xsd:boolean
+            player_getcommunitymarket() -> return: ns0:ArrayOfPlayerExchangemarket
+            player_getusertitle(userid: xsd:int) -> return: ns0:ArrayOfTitleid
+            player_postcommunitynews(headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            player_postmultiusernews(arr_userid: ns0:ArrayOfUserid, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            player_postusernews(userid: xsd:int, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            player_setuserbonus(userid: xsd:int, amount: xsd:int, reason: xsd:string) -> return: xsd:boolean
+            player_setusertitle(userid: xsd:int, titleid: xsd:int) -> return: xsd:boolean
+            postadminnews(userType: xsd:string, language: xsd:string, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            postcommunitynews(communityid: xsd:int, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            postmultiusernews(arr_userid: ns0:ArrayOfUserid, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            postusernews(userid: xsd:int, headline: xsd:string, content: xsd:string) -> return: xsd:boolean
+            setuserbonus(userid: xsd:int, amount: xsd:int, reason: xsd:string) -> return: xsd:boolean
+            setusertitle(userid: xsd:int, titleid: xsd:int) -> return: xsd:boolean
+            signupservice(userid: xsd:int) -> return: xsd:boolean
